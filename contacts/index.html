@@ -6,9 +6,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="media/logo.jpg" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <meta name="description" content="Learn more about Glory International Academy - our mission, vision, values, and dedicated staff.">
-  <meta name="keywords" content="Glory International Academy, about us, school, education, staff">
-  <title>About Us - Glory International Academy</title>
+  <meta name="description" content="Contact Glory International Academy - Get in touch with us for admissions, inquiries, and more information.">
+  <meta name="keywords" content="Glory International Academy, contact, school, education, admissions">
+  <title>Contact Us - Glory International Academy</title>
   <style>
     :root {
       --primary: #1a4d2e;
@@ -137,7 +137,7 @@
       cursor: pointer;
     }
 
-    /* Hero Section */
+    /* Page Hero */
     .page-hero {
       background: linear-gradient(rgba(26, 77, 46, 0.85), rgba(26, 77, 46, 0.85)), url('../media/grad4.jpg') center/cover no-repeat;
       color: white;
@@ -158,8 +158,8 @@
       margin: 0 auto;
     }
 
-    /* About Sections */
-    .about-section {
+    /* Contact Section */
+    .contact-section {
       padding: 80px 0;
     }
 
@@ -193,247 +193,170 @@
       margin: 0 auto;
     }
 
-    .about-content {
+    .contact-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 50px;
-      align-items: center;
     }
 
-    .about-text h3 {
+    .contact-info h3 {
       font-size: 1.8rem;
       margin-bottom: 20px;
       color: var(--primary);
     }
 
-    .about-text p {
-      margin-bottom: 20px;
+    .contact-info p {
+      margin-bottom: 30px;
       line-height: 1.7;
     }
 
-    .about-image {
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    .contact-details {
+      margin-top: 30px;
     }
 
-    .about-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: var(--transition);
-    }
-
-    .about-image:hover img {
-      transform: scale(1.05);
-    }
-
-    /* Values Section */
-    .values {
-      background-color: #f0f7f2;
-      padding: 80px 0;
-    }
-
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-
-    .value-card {
-      background-color: white;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: var(--transition);
-      text-align: center;
-    }
-
-    .value-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .value-icon {
-      width: 70px;
-      height: 70px;
-      background-color: var(--secondary);
-      border-radius: 50%;
+    .contact-item {
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      color: white;
-      font-size: 1.8rem;
-    }
-
-    .value-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 15px;
-      color: var(--primary);
-    }
-
-    /* Staff Section */
-    .staff {
-      padding: 80px 0;
-    }
-
-    .staff-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-
-    .staff-card {
-      background-color: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: var(--transition);
-      text-align: center;
-    }
-
-    .staff-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .staff-image {
-      height: 200px;
-      background-color: var(--secondary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 4rem;
-    }
-
-    .staff-content {
-      padding: 25px;
-    }
-
-    .staff-content h3 {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      color: var(--primary);
-    }
-
-    /* Gallery Section */
-    .gallery {
-      padding: 80px 0;
-      background-color: #f0f7f2;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 15px;
-    }
-
-    .gallery-item {
-      border-radius: 10px;
-      overflow: hidden;
-      height: 250px;
-      position: relative;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: var(--transition);
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.1);
-    }
-
-    .gallery-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-      color: white;
+      margin-bottom: 25px;
       padding: 20px;
-      transform: translateY(100%);
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
       transition: var(--transition);
     }
 
-    .gallery-item:hover .gallery-overlay {
-      transform: translateY(0);
+    .contact-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
 
-    /* Floating Contact */
-    .floating-contact {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      z-index: 999;
-    }
-
-    .contact-toggle {
+    .contact-icon {
       width: 60px;
       height: 60px;
-      background-color: var(--accent);
+      background-color: var(--secondary);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
       font-size: 1.5rem;
-      cursor: pointer;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      transition: var(--transition);
+      flex-shrink: 0;
     }
 
-    .contact-toggle:hover {
-      transform: scale(1.1);
+    .contact-text h4 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+      color: var(--primary);
     }
 
-    .contact-options {
-      position: absolute;
-      bottom: 70px;
-      right: 0;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-      padding: 15px;
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-      min-width: 200px;
-    }
-
-    .contact-options.active {
-      display: flex;
-    }
-
-    .contact-option {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px;
-      border-radius: 5px;
-      transition: var(--transition);
+    .contact-text a {
+      color: var(--dark);
       text-decoration: none;
+      transition: var(--transition);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .contact-text a:hover {
+      color: var(--primary);
+    }
+
+    .contact-form {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form h3 {
+      color: var(--primary);
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
       color: var(--dark);
     }
 
-    .contact-option:hover {
-      background-color: #f5f5f5;
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: 'Poppins', sans-serif;
+      transition: var(--transition);
     }
 
-    .contact-option i {
-      width: 30px;
-      height: 30px;
-      background-color: var(--primary);
-      border-radius: 50%;
+    .form-control:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(26, 77, 46, 0.1);
+    }
+
+    textarea.form-control {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    .submit-btn:hover {
+      background-color: #e6a200;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Map Section */
+    .map-section {
+      padding: 0 0 80px;
+    }
+
+    .map-container {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      height: 400px;
+    }
+
+    .map-placeholder {
+      height: 100%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       color: white;
-      font-size: 0.9rem;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .map-placeholder i {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .map-placeholder h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
     }
 
     /* Footer */
@@ -527,12 +450,8 @@
 
     /* Responsive Design */
     @media (max-width: 992px) {
-      .about-content {
+      .contact-container {
         grid-template-columns: 1fr;
-      }
-
-      .about-image {
-        order: -1;
       }
     }
 
@@ -574,6 +493,10 @@
       .section-title h2 {
         font-size: 2rem;
       }
+
+      .contact-form {
+        padding: 30px 20px;
+      }
     }
 
     @media (max-width: 576px) {
@@ -585,9 +508,16 @@
         font-size: 1.8rem;
       }
 
-      .values-grid,
-      .staff-grid {
-        grid-template-columns: 1fr;
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+
+      .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
       }
     }
   </style>
@@ -611,8 +541,8 @@
       <nav>
         <ul class="nav-menu" id="navMenu">
           <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html" class="active">About Us</a></li>
-          <li><a href="../contacts/index.html">Contact Us</a></li>
+          <li><a href="../about/index.html">About Us</a></li>
+          <li><a href="index.html" class="active">Contact Us</a></li>
           <li><a href="../joinus/index.html" class="cta-button">Register Now</a></li>
         </ul>
       </nav>
@@ -622,186 +552,121 @@
   <!-- Page Hero -->
   <section class="page-hero">
     <div class="container">
-      <h1>About Glory International Academy</h1>
-      <p>Discover our mission, vision, values, and the dedicated team that makes our academy special</p>
+      <h1>Contact Us</h1>
+      <p>Get in touch with us for admissions, inquiries, and more information about our academy</p>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about-section">
+  <!-- Contact Section -->
+  <section class="contact-section">
     <div class="container">
       <div class="section-title">
-        <h2>Our Story</h2>
-        <p>Learn about our journey and commitment to excellence in education</p>
+        <h2>Get In Touch</h2>
+        <p>We're here to answer any questions you may have about Glory International Academy</p>
       </div>
       
-      <div class="about-content">
-        <div class="about-text">
-          <h3>Shaping Future Leaders</h3>
-          <p>Glory International Academy is a leading educational institution dedicated to shaping future leaders through quality education. Our mission is to provide a nurturing environment where students can excel academically, socially, and personally.</p>
-          <p>We are a Nursery and Primary Academy located at Katooke Nabweru, with a curriculum that is learner-based and integrated with the International Primary Curriculum (IPC).</p>
-          <p>We engage our pupils in leisure activities like swimming and co-curricular activities like MDD (Music, Dance, and Drama) to ensure holistic development.</p>
-          <p>We also train computer literacy to our pupils to make them more practical in this dynamic digital world.</p>
-        </div>
-        
-        <div class="about-image">
-          <img src="../media/grad4.jpg" alt="Students at Glory International Academy">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Vision & Mission Section -->
-  <section class="values">
-    <div class="container">
-      <div class="section-title">
-        <h2>Our Vision & Mission</h2>
-        <p>The guiding principles that drive our educational approach</p>
-      </div>
-      
-      <div class="values-grid">
-        <div class="value-card">
-          <div class="value-icon">
-            <i class="fas fa-eye"></i>
-          </div>
-          <h3>Our Vision</h3>
-          <p>To be a globally recognized institution that empowers students to achieve their full potential.</p>
-        </div>
-        
-        <div class="value-card">
-          <div class="value-icon">
-            <i class="fas fa-bullseye"></i>
-          </div>
-          <h3>Our Mission</h3>
-          <p>To provide a nurturing environment where students can excel academically, socially, and personally.</p>
-        </div>
-        
-        <div class="value-card">
-          <div class="value-icon">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <h3>Our Approach</h3>
-          <p>We focus on building responsible, disciplined citizens with good morals and fear of God.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Staff Section -->
-  <section class="staff">
-    <div class="container">
-      <div class="section-title">
-        <h2>Our Head Staff Members</h2>
-        <p>Meet the dedicated team leading our academy</p>
-      </div>
-      
-      <div class="staff-grid">
-        <div class="staff-card">
-          <div class="staff-image">
-            <i class="fas fa-user-tie"></i>
-          </div>
-          <div class="staff-content">
-            <h3>Tr. Bwayo Gad</h3>
-            <p>Head of Academy</p>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Let's Start a Conversation</h3>
+          <p>We're always happy to hear from parents and guardians interested in our academy. Feel free to reach out through any of the contact methods below.</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Tr. Bwayo Gad</h4>
+                <a href="tel:+256751423172">+256 751 423 172</a>
+                <a href="tel:+256744274425">+256 744 274 425</a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Other Contacts</h4>
+                <a href="tel:+256763754703">+256 763 754 703</a>
+                <a href="tel:+256773890227">+256 773 890 227</a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email Addresses</h4>
+                <a href="mailto:bwayogad3@gmail.com">bwayogad3@gmail.com</a>
+                <a href="mailto:gloryinternationalacademy@gmail.com">gloryinternationalacademy@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Location</h4>
+                <p>Katooke Nabweru, Kawempe</p>
+                <small>Kampala, Uganda</small>
+              </div>
+            </div>
           </div>
         </div>
         
-        <div class="staff-card">
-          <div class="staff-image">
-            <i class="fas fa-user-graduate"></i>
-          </div>
-          <div class="staff-content">
-            <h3>Tr. Bwayo Teddy</h3>
-            <p>Academic Coordinator</p>
-          </div>
-        </div>
-        
-        <div class="staff-card">
-          <div class="staff-image">
-            <i class="fas fa-chalkboard-teacher"></i>
-          </div>
-          <div class="staff-content">
-            <h3>Tr. Noah</h3>
-            <p>Senior Teacher</p>
-          </div>
-        </div>
-        
-        <div class="staff-card">
-          <div class="staff-image">
-            <i class="fas fa-book-reader"></i>
-          </div>
-          <div class="staff-content">
-            <h3>Tr. Sarah</h3>
-            <p>Early Years Specialist</p>
-          </div>
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form action="https://formspree.io/f/xvgzgoyk" method="POST">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-control">
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" class="form-control" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section class="gallery">
+  <!-- Map Section -->
+  <section class="map-section">
     <div class="container">
       <div class="section-title">
-        <h2>Life at Our Academy</h2>
-        <p>Explore moments from our vibrant school community and activities</p>
+        <h2>Our Location</h2>
+        <p>Visit us at our campus in Katooke Nabweru, Kawempe</p>
       </div>
       
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="../media/beach2.jpg" alt="School Beach Trip">
-          <div class="gallery-overlay">
-            <h4>Educational Trips</h4>
-          </div>
-        </div>
-        
-        <div class="gallery-item">
-          <img src="../media/beach.jpg" alt="Beach Activities">
-          <div class="gallery-overlay">
-            <h4>Outdoor Learning</h4>
-          </div>
-        </div>
-        
-        <div class="gallery-item">
-          <img src="../media/mdd.jpg" alt="Music Dance and Drama">
-          <div class="gallery-overlay">
-            <h4>MDD Activities</h4>
-          </div>
-        </div>
-        
-        <div class="gallery-item">
-          <img src="../media/party.jpg" alt="School Celebrations">
-          <div class="gallery-overlay">
-            <h4>Celebrations</h4>
-          </div>
-        </div>
-        
-        <div class="gallery-item">
-          <img src="../media/walk.jpg" alt="Nature Walks">
-          <div class="gallery-overlay">
-            <h4>Nature Walks</h4>
-          </div>
-        </div>
-        
-        <div class="gallery-item">
-          <img src="../media/walk2.jpg" alt="Educational Walks">
-          <div class="gallery-overlay">
-            <h4>Educational Walks</h4>
-          </div>
-        </div>
-        
-        <div class="gallery-item">
-          <img src="../media/pose.jpg" alt="School Uniform">
-          <div class="gallery-overlay">
-            <h4>School Uniform</h4>
-          </div>
-        </div>
-        
-        <div class="gallery-item">
-          <img src="../media/pose2.jpg" alt="Sports Wear">
-          <div class="gallery-overlay">
-            <h4>Sports Wear</h4>
-          </div>
+      <div class="map-container">
+        <div class="map-placeholder">
+          <i class="fas fa-map-marked-alt"></i>
+          <h3>Glory International Academy</h3>
+          <p>Katooke Nabweru, Kawempe Division</p>
+          <p>Kampala, Uganda</p>
+          <a href="https://maps.google.com/?q=Katooke+Nabweru,Kawempe,Kampala,Uganda" class="cta-button" style="margin-top: 20px;">View on Google Maps</a>
         </div>
       </div>
     </div>
@@ -826,8 +691,8 @@
           <h4>Quick Links</h4>
           <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="index.html">About Us</a></li>
-            <li><a href="../contacts/index.html">Contact Us</a></li>
+            <li><a href="../about/index.html">About Us</a></li>
+            <li><a href="index.html">Contact Us</a></li>
             <li><a href="../joinus/index.html">Register Now</a></li>
           </ul>
         </div>
@@ -848,46 +713,10 @@
     </div>
   </footer>
 
-  <!-- Floating Contact -->
-  <div class="floating-contact">
-    <div class="contact-toggle" id="contactToggle">
-      <i class="fas fa-comments"></i>
-    </div>
-    <div class="contact-options" id="contactOptions">
-      <a href="tel:+256751423172" class="contact-option">
-        <i class="fas fa-phone"></i>
-        <span>Call Us</span>
-      </a>
-      <a href="mailto:bwayogad3@gmail.com" class="contact-option">
-        <i class="fas fa-envelope"></i>
-        <span>Email Us</span>
-      </a>
-      <a href="https://wa.me/256751423172" class="contact-option">
-        <i class="fab fa-whatsapp"></i>
-        <span>WhatsApp</span>
-      </a>
-    </div>
-  </div>
-
   <script>
     // Mobile Navigation Toggle
     document.getElementById('mobileToggle').addEventListener('click', function() {
       document.getElementById('navMenu').classList.toggle('active');
-    });
-
-    // Floating Contact Toggle
-    document.getElementById('contactToggle').addEventListener('click', function() {
-      document.getElementById('contactOptions').classList.toggle('active');
-    });
-
-    // Close floating contact when clicking outside
-    document.addEventListener('click', function(event) {
-      const contactToggle = document.getElementById('contactToggle');
-      const contactOptions = document.getElementById('contactOptions');
-      
-      if (!contactToggle.contains(event.target) && !contactOptions.contains(event.target)) {
-        contactOptions.classList.remove('active');
-      }
     });
 
     // Smooth scrolling for anchor links
