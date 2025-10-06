@@ -1,0 +1,908 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="media/logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="description" content="Register your child at Glory International Academy - Secure a place for quality education today.">
+  <meta name="keywords" content="Glory International Academy, register, admission, school, education">
+  <title>Register Your Child - Glory International Academy</title>
+  <style>
+    :root {
+      --primary: #1a4d2e;
+      --secondary: #4a8c5a;
+      --accent: #ffb300;
+      --light: #f8f9fa;
+      --dark: #333;
+      --gray: #6c757d;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: var(--light);
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .logo-text h1 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    .logo-text p {
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-menu a:hover {
+      color: var(--primary);
+    }
+
+    .nav-menu a.active {
+      color: var(--primary);
+    }
+
+    .nav-menu a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary);
+    }
+
+    .cta-button {
+      background-color: var(--accent);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      display: inline-block;
+    }
+
+    .cta-button:hover {
+      background-color: #e6a200;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Page Hero */
+    .page-hero {
+      background: linear-gradient(rgba(26, 77, 46, 0.85), rgba(26, 77, 46, 0.85)), url('../media/grad4.jpg') center/cover no-repeat;
+      color: white;
+      padding: 150px 0 80px;
+      text-align: center;
+      margin-top: 90px;
+    }
+
+    .page-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .page-hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Registration Section */
+    .registration-section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--accent);
+    }
+
+    .section-title p {
+      color: var(--gray);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .registration-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .registration-info {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .registration-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    .registration-info p {
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .features-list {
+      margin-top: 30px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      background-color: var(--secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .registration-form-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .registration-form-container h3 {
+      color: var(--primary);
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: 'Poppins', sans-serif;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(26, 77, 46, 0.1);
+    }
+
+    textarea.form-control {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .file-input {
+      padding: 8px 0;
+    }
+
+    .file-input-info {
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-top: 5px;
+    }
+
+    .submit-btn {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      width: 100%;
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    .submit-btn:hover {
+      background-color: #e6a200;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Classes Section */
+    .classes-section {
+      padding: 80px 0;
+      background-color: #f0f7f2;
+    }
+
+    .classes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .class-card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: var(--transition);
+    }
+
+    .class-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .class-icon {
+      width: 60px;
+      height: 60px;
+      background-color: var(--secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .class-card h4 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    /* Floating Contact */
+    .floating-contact {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+    }
+
+    .contact-toggle {
+      width: 60px;
+      height: 60px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: var(--transition);
+    }
+
+    .contact-toggle:hover {
+      transform: scale(1.1);
+    }
+
+    .contact-options {
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      padding: 15px;
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      min-width: 200px;
+    }
+
+    .contact-options.active {
+      display: flex;
+    }
+
+    .contact-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      transition: var(--transition);
+      text-decoration: none;
+      color: var(--dark);
+    }
+
+    .contact-option:hover {
+      background-color: #f5f5f5;
+    }
+
+    .contact-option i {
+      width: 30px;
+      height: 30px;
+      background-color: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 50px 0 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-logo img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .footer-links h4 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-links h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: var(--accent);
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: white;
+      padding-left: 5px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .registration-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        gap: 15px;
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .page-hero {
+        padding: 120px 0 60px;
+        margin-top: 70px;
+      }
+
+      .page-hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .page-hero p {
+        font-size: 1rem;
+      }
+
+      .section-title h2 {
+        font-size: 2rem;
+      }
+
+      .registration-info,
+      .registration-form-container {
+        padding: 30px 20px;
+      }
+
+      .classes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+    }
+
+    @media (max-width: 576px) {
+      .page-hero {
+        padding: 100px 0 40px;
+      }
+
+      .page-hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .feature-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo-container">
+        <img src="../media/logo.jpg" alt="Glory International Academy" class="logo">
+        <div class="logo-text">
+          <h1>Glory International Academy</h1>
+          <p>The Spring of Wisdom</p>
+        </div>
+      </div>
+      
+      <div class="mobile-toggle" id="mobileToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about/index.html">About Us</a></li>
+          <li><a href="../contacts/index.html">Contact Us</a></li>
+          <li><a href="index.html" class="active">Register Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Register Your Child</h1>
+      <p>Secure a place for quality education at Glory International Academy</p>
+    </div>
+  </section>
+
+  <!-- Registration Section -->
+  <section class="registration-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Admission Form</h2>
+        <p>Complete the form below to register your child for the upcoming academic year</p>
+      </div>
+      
+      <div class="registration-container">
+        <div class="registration-info">
+          <h3>Easy Online Registration</h3>
+          <p>Admission is still going on and you don't need to come to our office if you are still busy. All you need is to fill the form to secure a vacancy for your child.</p>
+          <p>We offer a comprehensive educational experience with our International Primary Curriculum, focusing on holistic development of each child.</p>
+          
+          <div class="features-list">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div>
+                <h4>Quality Education</h4>
+                <p>International curriculum with focus on individual growth</p>
+              </div>
+            </div>
+            
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div>
+                <h4>Moral Development</h4>
+                <p>Focus on building responsible citizens with good morals</p>
+              </div>
+            </div>
+            
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-laptop"></i>
+              </div>
+              <div>
+                <h4>Digital Literacy</h4>
+                <p>Computer training for the dynamic digital world</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="registration-form-container">
+          <h3>Student Registration Form</h3>
+          <form action="https://formspree.io/f/xvgzgoyk" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="child_name">Child Full Names</label>
+              <input type="text" id="child_name" name="child_name" class="form-control" maxlength="30" placeholder="Lukyamuzi Victor" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="child_pic">Child Profile Picture</label>
+              <input type="file" id="child_pic" name="upload" class="form-control file-input" accept="image/jpg, image/jpeg, image/png" required>
+              <div class="file-input-info">Accepted formats: JPG, JPEG, PNG</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="date_of_birth">Child Date of Birth</label>
+              <input type="date" id="date_of_birth" name="date_of_birth" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="parent_name">Parent/Guardian Names</label>
+              <input type="text" id="parent_name" name="parent_name" class="form-control" maxlength="30" placeholder="Bwayo Gad" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="contact">Contact Number</label>
+              <input type="tel" id="contact" name="contact" class="form-control" maxlength="14" placeholder="+256780245847 or 0780245847" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Parent Email Address</label>
+              <input type="email" id="email" name="email" class="form-control" maxlength="30" placeholder="mustafakitooke@gmail.com">
+            </div>
+            
+            <div class="form-group">
+              <label for="class">Class of Admission</label>
+              <select id="class" name="class" class="form-control" required>
+                <option value="" disabled selected>Select Class</option>
+                <option>Baby</option>
+                <option>Middle</option>
+                <option>Top</option>
+                <option>P.1</option>
+                <option>P.2</option>
+                <option>P.3</option>
+                <option>P.4</option>
+                <option>P.5</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="health">Child Health Information</label>
+              <textarea id="health" name="message" class="form-control" placeholder="Describe any health issues. If good, please write 'Good'" cols="30" rows="5"></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="doctor_contact">Doctor's Contact Information</label>
+              <input type="tel" id="doctor_contact" name="doctor_contact" class="form-control" maxlength="14" placeholder="0780245847" required>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-user-plus"></i> Register Child
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Classes Section -->
+  <section class="classes-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Available Classes</h2>
+        <p>We offer education from early childhood through primary levels</p>
+      </div>
+      
+      <div class="classes-grid">
+        <div class="class-card">
+          <div class="class-icon">
+            <i class="fas fa-baby"></i>
+          </div>
+          <h4>Baby Class</h4>
+          <p>Ages 3-4</p>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-icon">
+            <i class="fas fa-child"></i>
+          </div>
+          <h4>Middle Class</h4>
+          <p>Ages 4-5</p>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-icon">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <h4>Top Class</h4>
+          <p>Ages 5-6</p>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h4>Primary 1-5</h4>
+          <p>Ages 6-11</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="../media/logo.jpg" alt="Glory International Academy">
+          <h3>Glory International Academy</h3>
+          <p>The Spring of Wisdom</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/index.html">About Us</a></li>
+            <li><a href="../contacts/index.html">Contact Us</a></li>
+            <li><a href="index.html">Register Now</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Contact Info</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Katooke Nabweru, Kawempe</li>
+            <li><i class="fas fa-phone"></i> +256 751 423 172</li>
+            <li><i class="fas fa-envelope"></i> bwayogad3@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>All rights reserved and protected by the copyright digital act 2023. No part of this may be replicated without prior owner permission.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Contact -->
+  <div class="floating-contact">
+    <div class="contact-toggle" id="contactToggle">
+      <i class="fas fa-comments"></i>
+    </div>
+    <div class="contact-options" id="contactOptions">
+      <a href="tel:+256751423172" class="contact-option">
+        <i class="fas fa-phone"></i>
+        <span>Call Us</span>
+      </a>
+      <a href="mailto:bwayogad3@gmail.com" class="contact-option">
+        <i class="fas fa-envelope"></i>
+        <span>Email Us</span>
+      </a>
+      <a href="https://wa.me/256751423172" class="contact-option">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Mobile Navigation Toggle
+    document.getElementById('mobileToggle').addEventListener('click', function() {
+      document.getElementById('navMenu').classList.toggle('active');
+    });
+
+    // Floating Contact Toggle
+    document.getElementById('contactToggle').addEventListener('click', function() {
+      document.getElementById('contactOptions').classList.toggle('active');
+    });
+
+    // Close floating contact when clicking outside
+    document.addEventListener('click', function(event) {
+      const contactToggle = document.getElementById('contactToggle');
+      const contactOptions = document.getElementById('contactOptions');
+      
+      if (!contactToggle.contains(event.target) && !contactOptions.contains(event.target)) {
+        contactOptions.classList.remove('active');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if(targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 100,
+            behavior: 'smooth'
+          });
+          
+          // Close mobile menu if open
+          document.getElementById('navMenu').classList.remove('active');
+        }
+      });
+    });
+
+    // Sticky header
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      if(window.scrollY > 100) {
+        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
